@@ -1,0 +1,2 @@
+#gcc -g -O0 thread_posix.c net_posix.c netqw.c net.c strlcat.c strlcpy.c replacement_functions.c common.c sys_linux.c huffman.c message_reading.c sleep.c tools.c main.c -l pthread -lm -D BUILD_STRL -D __linux__ -D TESTPROG
+gcc -g -O0 -fPIC thread_posix.c net_posix.c netqw.c net.c strlcat.c strlcpy.c replacement_functions.c common.c sys_linux.c huffman.c message_reading.c sleep.c tools.c qwc_string.c main.c -l pthread -lm -D BUILD_STRL -D __linux__ -o libqw_connect.so -shared -Wl,-soname,libqw_connect.so
